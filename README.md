@@ -1,4 +1,4 @@
-"""# Agri-Credit Risk & Loan Default Prediction Pipeline
+# Agri-Credit Risk & Loan Default Prediction Pipeline
 
 ## 📌 Problem Statement
 Farmers and agricultural workers often lack traditional financial credit histories, making it difficult for banks and micro-lenders to assess their creditworthiness. Because of this "thin-file" problem, many farmers are excluded from formal credit systems. 
