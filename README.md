@@ -8,7 +8,7 @@ Financial institutions need a reliable way to assess agricultural loan risk usin
 ## 💡 Proposed Solution
 We built an end-to-end machine learning and data engineering pipeline on the **Databricks** platform. This solution bridges the gap between raw agricultural metrics and financial risk assessment through a Medallion architecture:
 
-1. **Synthetic CIBIL Scoring (Feature Engineering):** We process raw agricultural and meteorological data to engineer a custom "Agri-Score". By utilizing PySpark Window functions and SciPy's skew-normal distribution (`scipy.stats.skewnorm`), we map raw farm metrics to a realistic credit score distribution (300-900 range, negatively skewed with a mean around ~730).
+1. **Synthetic CIBIL Scoring (Feature Engineering):** We process raw agricultural and meteorological data to engineer a custom "Agri-Score". By utilizing PySpark Window functions and SciPy's skew-normal distribution (`scipy.stats.skewnorm`), we map raw farm metrics to a realistic credit score distribution (300-900 range).
 2. **Loan Default Prediction (Predictive AI):** We utilize **Databricks AutoML** to automatically train, tune, and log optimal predictive models (e.g., XGBoost, Random Forest) that determine the probability of loan default based on the farmer's parameters and their new synthetic Agri-Score.
 3. **GenAI Advisory (Prescriptive AI):** We extract feature importances from the trained ML model and feed them into an ultra-fast LLM via the **Groq API**. This generates personalized, step-by-step advice for the farmer on how to optimize their farm parameters to improve their score and secure a loan.
 
