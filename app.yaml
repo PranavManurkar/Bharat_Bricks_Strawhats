@@ -1,0 +1,25 @@
+name: loan-default-prediction
+display_name: Rural Loan Assistant
+
+description: |
+  Streamlit application for rural loan default prediction.
+  Uses Model Serving API and Groq LLM for intelligent analysis.
+
+command: ["streamlit", "run", "app.py", "--server.port=8000", "--server.address=0.0.0.0"]
+
+runtime:
+  python: "3.11"
+
+dependencies:
+  - streamlit>=1.28.0
+  - pandas>=2.0.0
+  - numpy>=1.24.0
+  - databricks-sdk>=0.18.0
+  - groq>=0.4.0
+  - requests>=2.31.0
+
+env:
+  - name: APP_ENV
+    value: production
+  - name: GROQ_API_KEY
+    value: ${GROQ_API_KEY}
