@@ -985,7 +985,7 @@ import groq
 import os
 
 # 2. Set Groq API key (replace with your actual API key)
-
+os.environ['GROQ_API_KEY'] = "API_KEY_HERE"
 
 # 3. Prepare context: feature importances and CIBIL score calculation parameters/weights
 feature_importance_df = pd.DataFrame({
